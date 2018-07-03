@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 // import './index.scss';
 
-import App from './app';
+import Pnd from './pnd';
 
 const div = document.createElement('div');
 document.body.append(div);
 
-render(<App />, div);
+render(<Pnd/>, div);
