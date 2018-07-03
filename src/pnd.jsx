@@ -4,7 +4,7 @@ import Graph from './components/graph';
 class Pnd extends Component {
   render() {
     return(
-    <div>
+    <div className="pnd">
       <div>Hi pnd!</div>
       <Graph/>
     </div>
