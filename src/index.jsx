@@ -7,4 +7,4 @@ import Pnd from './pnd';
 const div = document.createElement('div');
 document.body.append(div);
 
-render(<Pnd/>, div);
+render(<Pnd />, div);
