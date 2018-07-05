@@ -10,7 +10,10 @@
     "linebreak-style": "off",
     "class-methods-use-this": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/prefer-stateless-function" : "warn"
+    "react/prefer-stateless-function": "warn",
+    "comma-dangle": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off"
   }
 }
 

@@ -7,4 +7,11 @@ import Pnd from './pnd';
 const div = document.createElement('div');
 document.body.append(div);
 
-render(<Pnd />, div);
+let i = 0;
+setInterval(() => {
+  i += 1;
+  const activity = {
+    name: i
+  };
+  render(<Pnd activity={activity} />, div);
+}, 3000);
