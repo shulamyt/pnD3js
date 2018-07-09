@@ -6,7 +6,7 @@ class Pnd extends Component {
     return (
       <div className="pnd">
         <div>Hi pnd!</div>
-        <Graph activity={this.props.activity} />
+        <Graph model={this.props.plan} />
       </div>
     );
   }

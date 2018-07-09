@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const autoPrefixer = require('autoprefixer');
+const webpack = require('webpack');
 
 const context = resolve(__dirname, 'src');
 
@@ -95,5 +96,8 @@ module.exports = {
     new HtmlPlugin({
       title: 'pnD3js'
     }),
+    new webpack.ProvidePlugin({
+      d3: "d3"
+    })
   ]
 };

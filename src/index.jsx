@@ -7,11 +7,25 @@ import Pnd from './pnd';
 const div = document.createElement('div');
 document.body.append(div);
 
-let i = 0;
-setInterval(() => {
-  i += 1;
-  const activity = {
-    name: i
-  };
-  render(<Pnd activity={activity} />, div);
-}, 3000);
+var plan = {
+  "name" : "A",
+  "children" : [
+    {"name" : "A1" },
+    {"name" : "A2" },
+    {
+      "name" : "A3",
+      "children": [
+        {
+          "name" : "A31",
+          "children" : [
+            {"name" : "A311" },
+            {"name" : "A312" }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+render(<Pnd plan={plan} />, div);
+
