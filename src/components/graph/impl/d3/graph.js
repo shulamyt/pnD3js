@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import uniqBy from 'lodash/uniqBy';
 
 function renderGraph(root) {
   createNodes(root);
@@ -6,9 +7,11 @@ function renderGraph(root) {
 }
 
 function createLinks(root){
+  var descendants = root.descendants().slice(1);
+  var uniqDescendants = uniqBy(descendants, 'data.id');
   var links = d3.select('.links')
     .selectAll('path')
-    .data(root.descendants().slice(1));
+    .data(uniqDescendants);
 
   links.enter()
     .append('path')
@@ -16,9 +19,12 @@ function createLinks(root){
 }
 
 function createNodes(root){
+  var descendants = root.descendants();
+  var uniqDescendants = uniqBy(descendants, 'data.id');
+
   var nodes = d3.select('.nodes')
     .selectAll('g.node')
-    .data(root.descendants());
+    .data(uniqDescendants);
 
   var enteringNodes = nodes.enter()
     .append('g')
