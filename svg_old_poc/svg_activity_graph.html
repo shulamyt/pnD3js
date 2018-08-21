@@ -1,0 +1,298 @@
+<html>
+ <head>                                                        
+ <script type="text/javascript" src="jquery-2.0.0.js"></script>
+ <script type="text/javascript" src="underscore.js"></script> 
+ <script type="text/javascript" src="svg_graph.js"></script>          
+ <script type="text/javascript">                                         
+ 
+ function createDiGraph1(root) {
+	var n2 = new Node('n2');
+	var n3 = new Node('n3');
+	var n4 = new Node('n4');
+   	var n5 = new Node('n5');
+	var n6 = new Node('n6');
+	var n7 = new Node('n7');
+	var n8 = new Node('n8');
+   	root.addSuccessor(n2);
+   	root.addSuccessor(n3);
+   	root.addSuccessor(n4);
+	root.addSuccessor(n7);
+   	n2.addSuccessor(n5);
+   	n2.addSuccessor(n3);
+   	n4.addSuccessor(n3);
+   	n4.addSuccessor(n6);
+   	n5.addSuccessor(n8);
+	n7.addSuccessor(n8);   
+	return new Graph(root);
+ }
+ function createDiGraph2() {
+	var v1 = new Node('A');
+	var v2 = new Node('B');
+	var v3 = new Node('C');
+	var v4 = new Node('D');
+	var v5 = new Node('E');
+	var v6 = new Node('F');
+	var v7 = new Node('G');
+	var v8 = new Node('H');
+	var v9 = new Node('I');
+	v1.addSuccessor(v2);
+	v1.addSuccessor(v3);
+	v3.addSuccessor(v4);
+	v2.addSuccessor(v5);
+	v3.addSuccessor(v6);
+	v1.addSuccessor(v7);
+	v7.addSuccessor(v8);
+	v7.addSuccessor(v3);
+	v7.addSuccessor(v4);
+	v5.addSuccessor(v8);
+	v8.addSuccessor(v9);
+	v4.addSuccessor(v9);
+	v6.addSuccessor(v9);
+	return new Graph(v1);
+ }
+
+ function createDiGraphPOC() {
+	var v1 = new Node('v1');
+	var v2 = new Node('v2');
+	var v3 = new Node('v3');
+	var v4 = new Node('v4');
+	var v5 = new Node('v5');
+	var v6 = new Node('v6');
+	var v7 = new Node('v7');
+	var v8 = new Node('v8');
+	var v9 = new Node('v9');
+	var v10 = new Node('v10');
+	var v11 = new Node('v11');
+	var v12 = new Node('v12');
+	var v13 = new Node('v13');
+	var v14 = new Node('v14');
+	var v15 = new Node('v15');
+	var v16 = new Node('v16');
+	var v17 = new Node('v17');
+	var v18 = new Node('v18');
+	var v19 = new Node('v19');
+	var v20 = new Node('v20');
+	var v21 = new Node('v21');
+	var v22 = new Node('v22');
+	var v23 = new Node('v23');
+	var v24 = new Node('v24');
+	var v25 = new Node('v25');
+	var v26 = new Node('v26');
+	var v27 = new Node('v27');
+	var v28 = new Node('v28');
+	var v29 = new Node('v29');
+	var v30 = new Node('v30');
+	var v31 = new Node('v31');
+	var v32 = new Node('v32');
+	var v33 = new Node('v33');
+	var v34 = new Node('v34');
+	var v35 = new Node('v35');
+	var v36 = new Node('v36');
+	var v37 = new Node('v37');
+	var v38 = new Node('v38');
+	var v39 = new Node('v39');
+	var v40 = new Node('v40');
+	var v41 = new Node('v41');
+	var v42 = new Node('v42');
+	v1.addSuccessor(v2);
+	v2.addSuccessor(v3);
+	v3.addSuccessor(v4);
+	v4.addSuccessor(v5);
+	v4.addSuccessor(v6);
+	v5.addSuccessor(v7);
+	v6.addSuccessor(v7);
+	v7.addSuccessor(v8);
+	v8.addSuccessor(v9);
+	v9.addSuccessor(v10);
+	v10.addSuccessor(v11);
+	v11.addSuccessor(v12);
+	v12.addSuccessor(v13);
+	v12.addSuccessor(v14);
+	v14.addSuccessor(v15);
+	v15.addSuccessor(v16);
+	v13.addSuccessor(v16);
+	v13.addSuccessor(v17);
+	v16.addSuccessor(v18);
+	v18.addSuccessor(v19);
+	v19.addSuccessor(v20);
+	v17.addSuccessor(v20);
+	v20.addSuccessor(v21);
+	v21.addSuccessor(v22);
+	v22.addSuccessor(v23);
+	v23.addSuccessor(v24);
+	v23.addSuccessor(v25);
+	v23.addSuccessor(v26);
+	v23.addSuccessor(v27);
+	v24.addSuccessor(v28);
+	v26.addSuccessor(v29);
+	v29.addSuccessor(v30);
+	v30.addSuccessor(v31);
+	v27.addSuccessor(v31);
+	v31.addSuccessor(v32);
+	v32.addSuccessor(v33);
+	v33.addSuccessor(v34);
+	v34.addSuccessor(v35);
+	v35.addSuccessor(v36);
+	v36.addSuccessor(v37);
+	v37.addSuccessor(v38);
+	v38.addSuccessor(v39);
+	v39.addSuccessor(v40);
+	v39.addSuccessor(v41);
+	v41.addSuccessor(v42);
+	return new Graph(v1);
+ }
+function createDiGraph3() {
+	var v1 = new Node('1');
+	var v2 = new Node('2');
+	var v3 = new Node('3');
+	var v4 = new Node('4');
+	var v5 = new Node('5');
+	var v6 = new Node('6');
+	var v7 = new Node('7');
+	var v8 = new Node('8');
+	var v9 = new Node('9');
+	var v10 = new Node('10');
+	var v11 = new Node('11');
+	var v12 = new Node('12');
+	var v13 = new Node('13');
+	var v14 = new Node('14');
+	var v15 = new Node('15');
+	var v16 = new Node('16');
+	v1.addSuccessor(v2);
+	v1.addSuccessor(v3);
+	v2.addSuccessor(v4);
+	v3.addSuccessor(v4);
+	v3.addSuccessor(v5);
+	v4.addSuccessor(v6);
+	v4.addSuccessor(v7);
+	v5.addSuccessor(v7);
+	v7.addSuccessor(v8);
+	v7.addSuccessor(v9);
+	v7.addSuccessor(v11);
+	v6.addSuccessor(v8);
+	v6.addSuccessor(v16);
+	v9.addSuccessor(v12);
+	v8.addSuccessor(v11);
+	v8.addSuccessor(v12);
+	v8.addSuccessor(v10);
+	v10.addSuccessor(v13);
+	v10.addSuccessor(v14);
+	v11.addSuccessor(v15);
+	v12.addSuccessor(v16);
+	v2.addSuccessor(v15);
+	v2.addSuccessor(v16);
+	v3.addSuccessor(v15);
+	v3.addSuccessor(v16);
+	return new Graph(v1);
+ }
+ function createDiGraph4() {
+	var a = new Node('a');
+	var b = new Node('b');
+	var c = new Node('c');
+	var d = new Node('d');
+	var e = new Node('e');
+	var f = new Node('f');
+	var g = new Node('g');
+	var h = new Node('h');
+
+	a.addSuccessor(b);
+	a.addSuccessor(c);
+	b.addSuccessor(d);
+	b.addSuccessor(e);
+	c.addSuccessor(f);
+	c.addSuccessor(g);
+	e.addSuccessor(h);
+
+	return new Graph(a);
+ }
+ function plotGraph(type) {
+	var graph;
+	if(type==1) {
+		graph = createDiGraph1(new Node('root'));
+	} else if(type==2) {
+		graph = createDiGraph2();
+	} else if(type==3) {
+		graph = createDiGraph3();
+	} else if(type==4) {
+		graph = createDiGraph4();
+	} else {
+		graph = createDiGraphPOC();
+	}
+	svgGraph = new SvgGraph({svgId:"mysvg",width:$(window).width(),height:$(window).height(),
+								nodeSpace:40,nodeRadius:7,nodeFill:'green',nodeStrokeWidth:1,
+								edgeStroke:'rgb(0,128,0)',edgeStrokeWidth:2,nodeTextFill:"black",
+								nodeFontSize:10,nodeTextAnchor:'middle',graph : graph})
+	svgGraph.plotGraph();
+ }
+ function changeGraph() {
+	$("#mysvg").empty();
+	currentDisplayedGraphType = ++currentDisplayedGraphType % 5;
+	plotGraph(currentDisplayedGraphType);
+ }
+ function findNode(nodeName) {
+ 	svgGraph.flashNodeColor(nodeName,'red',2000);
+ }
+ function onFindButtonClicked() {
+ 	var nodeName = $("#nodeName").val();
+ 	findNode(nodeName);
+ }
+ var currentDisplayedGraphType;
+$(document).ready(function() {
+	currentDisplayedGraphType=0;
+	plotGraph(currentDisplayedGraphType);
+ });	
+
+ </script>
+	<style>
+	  .compass{
+		fill:  #fff;
+		stroke:  #000;
+		stroke-width:  1.5;
+	  }
+	  .button{
+		fill:  gray;
+		stroke:  #0C2C84;
+		stroke-miterlimit:  6;
+		stroke-linecap:  round;
+	  }
+	  .button:hover{
+		stroke-width:  2;
+	  }
+	  .plus-minus{
+		fill:  #fff;
+		pointer-events: none;
+	  }
+	</style> 
+ </head>           
+<body>
+	<input type="button" value="change graph" onclick="changeGraph()" />
+	<input type="text" id="nodeName"  />
+	<input type="button" value="find" onclick="onFindButtonClicked()" />
+	<div >
+	<svg xmlns='http://www.w3.org/2000/svg' id="controlsvg" width="100" height="100">
+	<circle cx="50" cy="50" r="42" fill="white" opacity="0.75"/>
+		<path class="button" onclick="svgGraph.pan(0,-10)"
+		  d="M50 10 l12 20 a40,70 0 0,0 -24,0z" />
+		<path class="button" onclick="svgGraph.pan(-10,0)"
+		  d="M10 50 l20 -12 a70,40 0 0,0 0,24z" />
+		<path class="button" onclick="svgGraph.pan(0,10)"
+		  d="M50 90 l12 -20 a40,70 0 0,1 -24,0z" />
+		<path class="button" onclick="svgGraph.pan(10,0)"
+		  d="M90 50 l-20 -12 a70,40 0 0,1 0,24z" />
+		<circle class="compass" cx="50" cy="50" r="20"/>
+		<circle class="button"  cx="50" cy="41" r="8"
+		  onclick="svgGraph.zoom(0.9)"/>
+		<circle class="button"  cx="50" cy="59" r="8"
+		  onclick="svgGraph.zoom(1.1)"/>
+		<rect class="plus-minus" x="46" y="39.5"
+		  width="8" height="3"/>
+		<rect class="plus-minus" x="46" y="57.5"
+		  width="8" height="3"/>
+		<rect class="plus-minus" x="48.5" y="55"
+		 width="3" height="8"/>
+	</svg>
+	<svg xmlns='http://www.w3.org/2000/svg' id="mysvg">
+	</svg>
+	</div>
+</body>
+</html>
